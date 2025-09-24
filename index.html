@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tabla: Neurociencias </title>
+
+  <!-- Coloqué los estilos al inicio del head -->
+  <style>
+    :root {
+      --table-width: 90%;
+      --gap: 12px;
+      --border-color: #333;
+      --bg-cell: #ffffff;
+      --bg-page: #f6f8fb;
+    }
+
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 16px;
+      background: var(--bg-page);
+      color: #111;
+    }
+
+    h2 { text-align:center; margin-bottom:10px; }
+
+    /* Tabla principal */
+    table {
+      width: var(--table-width);
+      margin: 0 auto;
+      border-collapse: collapse;
+      table-layout: fixed; 
+    }
+
+    td {
+      border: 2px solid var(--border-color);
+      padding: 12px;
+      vertical-align: top;
+      background: var(--bg-cell);
+      box-sizing: border-box;
+    }
+
+    /* Alturas principales dpendiendo del tamaño de la imagwen agregada*/
+    .fila-pequena { height: 60px; }
+    .fila-grande  { height: 220px; }
+
+    /* Imágenes contenidas en las celdas */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 8px auto;
+    }
+
+    figure { margin: 0; }
+    figcaption { font-size: .9rem; color:#555; margin-top:6px; text-align:center; }
+
+    /* Texto explicativo */
+    .small { font-size: .95rem; color:#222; }
+
+    /* Ajuste de tabla en "bloques" y cedldas */
+    @media (max-width: 700px) {
+      table, tbody, tr, td { display: block; width: 100%; }
+      td { margin-bottom: 10px; }
+      .fila-pequena, .fila-grande { height: auto; }
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Neurociencias</h2>
+
+  <table>
+    <!-- Fila 1.  título / una columna (colspan 4) -->
+    <tr class="fila-pequena">
+      <td colspan="4">
+        <h3 style="margin:0;">Conceptos clave de Neurociencias</h3>
+        <p class="small" style="margin:.4em 0 0 0;">Neuronas, sinapsis, lóbulos cerebrales y métodos de estudio.</p>
+      </td>
+      
+    </tr>
+
+    <!-- Fila 2: tres "columnas" repartidas con colspan 1 + 2 + 1 -->
+    <tr class="fila-grande">
+      <!-- Col 1: Neuronas -->
+      <td>
+        <h4>Neuronas</h4>
+        <figure>
+          <!-- Reemplaza src por tu archivo o URL real -->
+          <img src="https://plus.unsplash.com/premium_photo-1681487548276-48a2c640ade9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Diagrama de una neurona: dendritas, soma, axón y terminales" />
+          <figcaption>Partes de la neurona (dendritas, soma, axón).</figcaption>
+        </figure>
+        <p class="small">Unidad básica del sistema nervioso: transmite señales eléctricas y químicas.</p>
+      </td>
+
+      <!-- Col 2 (más ancha): Sinapsis -->
+      <td colspan="2">
+        <h4>Sinapsis y neurotransmisores</h4>
+        <figure>
+          <img src="https://plus.unsplash.com/premium_photo-1718188840468-966eda66d93f?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sinapsis: neurotransmisores cruzando la hendidura" />
+          <figcaption>Sinapsis química: liberación de neurotransmisores.</figcaption>
+        </figure>
+        <ul class="small" style="text-align:left; margin-left:12px;">
+          <li>Transmisión química: vesículas → neurotransmisores → receptores.</li>
+          <li>Ejemplos: dopamina, serotonina, acetilcolina.</li>
+        </ul>
+      </td>
+
+      <!-- Col 3: Neuroplasticidad -->
+      <td>
+        <h4>Neuroplasticidad</h4>
+        <figure>
+          <img src="https://s3.amazonaws.com/dynamicimages.cognifit.com/storage/cognifit/landing/brain-neuronal-network.jpg" alt="Concepto de neuroplasticidad: conexiones que cambian" />
+          <figcaption>1. Redes neuronales antes de entrenar</figcaption>
+          <figcaption>2. Redes neuronales a 2 semanas de estimulación cognitiva.</figcaption>
+          <figcaption>3. Redes neuronales a 2 meses de estimulación cognitiva.</figcaption>
+          <figcaption>El cerebro se reorganiza con la experiencia.</figcaption>
+        </figure>
+        <p class="small">Mecanismos de aprendizaje, memoria y recuperación tras lesión.</p>
+      </td>
+    </tr>
+
+    <!-- Fila 3: dos columnas (cada una con colspan=2) -->
+    <tr class="fila-grande">
+      <td colspan="2">
+        <h4>Áreas del cerebro</h4>
+        <figure>
+          <img src="https://media.istockphoto.com/id/1227575331/photo/digital-illustration-of-human-brain-lobe-lobes-anatomy-3d-rendering.jpg?s=1024x1024&w=is&k=20&c=JvImoqjzptpH6FVSYPplzFjbOwUIJeKBj_bNqYsr050=" alt="Lóbulos cerebrales: frontal, parietal, temporal, occipital" />
+          <figcaption>Lóbulos cerebrales y funciones generales.</figcaption>
+        </figure>
+       
+      </td>
+
+      <td colspan="2">
+        <h4>Métodos de estudio</h4>
+        <figure>
+          <img src="https://media.istockphoto.com/id/2200553103/photo/medical-hospital-research-lab-male-medical-scientist-using-computer-with-brain-scan-mri.jpg?s=1024x1024&w=is&k=20&c=YrFbg-aC4gnsMEQO3fvuzF9VRTHlddjdrd0MdBhR-gM=" alt="Iconos representativos: EEG, fMRI, PET" />
+          <figcaption>EEG: Electroencefalografía Digital.</figcaption>
+          <figcaption>fMRI. Resonancia Magnética Funcional.</figcaption>
+          <figcaption>PET: Tomografía por Emisión de Positrones.</figcaption>
+          <figcaption>TMS: Estimulación Magnética Transcraneal.</figcaption>
+        </figure>
+        <p class="small">Desde registros eléctricos (EEG) hasta imágenes estructurales y funcionales (MRI).</p>
+      </td>
+    </tr>
+
+    <!-- Fila 4: nota general -->
+    <tr class="fila-pequena">
+      <td colspan="4">
+        <strong>Nota científica:</strong>
+        <strong>Las neurociencias y la inteligencia artificial (IA) son campos entrelazados: la neurociencia busca comprender el cerebro humano, y utiliza IA para analizar datos cerebrales y modelar funciones neuronales, mientras que la IA se inspira en el cerebro, desarrollando redes neuronales que imitan su estructura para crear máquinas más inteligentes y eficientes, especialmente en tareas como el aprendizaje y la toma de decisiones. Esta convergencia ha dado lugar a la neuroIA, un campo de estudio que aplica conocimientos de ambas disciplinas para crear IA inspirada en el cerebro y para usar IA en la neurociencia, llevando a avances en diagnóstico neurológico, interfaces cerebro-máquina y comprensión de la cognición humana. </strong> 
+      </td>
+    </tr>
+
+    <!-- Fila 5: 4 columnas pequeñas -->
+    <tr class="fila-pequena">
+      <td>
+        <h5 style="margin:0;">Lecturas</h5>
+        <p class="small" style="margin:.2em 0 0 0;">https://medium.com/@david.a.ragland/la-interacci%C3%B3n-entre-la-neurociencia-y-la-inteligencia-artificial-una-evoluci%C3%B3n-sin%C3%A9rgica-c9a6aa988982</p>
+      </td>
+      <td>
+        <h5 style="margin:0;">Aplicaciones</h5>
+        <p class="small" style="margin:.2em 0 0 0;">Educación, neurorehabilitación, interfaces.</p>
+        <img src="https://media.istockphoto.com/id/2236021007/vector/neuron-symbol-vector-abstract-molecule-design.jpg?s=1024x1024&w=is&k=20&c=2rUB1Iv2jhIzRmqwwdjyZ7aOp8iQKqk8_i30dQdiOtQ=" alt="Desarrollo Neurocienca.AI">
+    </td>
+      <td>
+        <h5 style="margin:0;">Actividades</h5>
+        <p class="small" style="margin:.2em 0 0 0;">Mapear funciones; experimentos didácticos.</p>
+        <img src="https://media.istockphoto.com/id/917582158/vector/futuristic-brain.jpg?s=1024x1024&w=is&k=20&c=S4AQr4LH5IJt7hEirWentOzg_PYKHEwj49uSpDcAlOk=" alt="Desarrollo">
+    </td>
+      <td>
+        <h5 style="margin:0;">Autor</h5>
+        <p class="small" style="margin:.2em 0 0 0;">&copy; 2025 Merari Granados J.</p>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
